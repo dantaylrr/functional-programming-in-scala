@@ -26,24 +26,20 @@ class Counter(val start: Int) {
 
   // Overloading the incremental counter
   def inc(): Counter = {
-    val result = new Counter(start = start + 1) // This is known as immutability - we create a new class instance
-    result
+    new Counter(start = start + 1) // This is known as immutability - we create a new class instance
   }
 
   def inc(increment: Int): Counter = {
-    val result = new Counter(start = start + increment)
-    result
+    new Counter(start = start + increment)
   }
 
   // Overloading the decremental counter
   def dec(): Counter = {
-    val result = new Counter(start = start - 1)
-    result
+    new Counter(start = start - 1)
   }
 
   def dec(decrement: Int): Counter = {
-    val result = new Counter(start = start - decrement)
-    result
+    new Counter(start = start - decrement)
   }
 
 }

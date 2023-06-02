@@ -26,11 +26,8 @@ class Author(firstName: String, surname: String, val yearOfBirth: Int) {
 
 class Novel(name: String, val releaseYear: Int, author: Author) {
 
-  // I'm returning values that aren't Unit so I can use these use-cases elsewhere to practice testing / assertions
-  def ageOfAuthor(releaseYear: Int = this.releaseYear, authorAge: Int = author.yearOfBirth): Int = {
-    val age = releaseYear - authorAge
-    println(s"The author was ${age} years old when they wrote this book.")
-    age
+  def ageOfAuthor(releaseYear: Int = this.releaseYear, authorAge: Int = author.yearOfBirth): Unit = {
+    println(s"The author was ${releaseYear - authorAge} years old when they wrote this book.")
   }
 
   def isWrittenBy(author: Author = this.author): Unit = {
@@ -38,7 +35,6 @@ class Novel(name: String, val releaseYear: Int, author: Author) {
   }
 
   def copy(newYearOfRelease: Int): Novel = {
-    val copyInstance = new Novel(name = this.name, releaseYear = newYearOfRelease, author = this.author)
-    copyInstance
+    new Novel(name = this.name, releaseYear = newYearOfRelease, author = this.author)
   }
 }

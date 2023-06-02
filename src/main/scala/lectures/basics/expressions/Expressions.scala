@@ -1,4 +1,4 @@
-package lectures.part1.expressions
+package lectures.basics.expressions
 
 object Expressions extends App {
   /* 1 + 2 here is called an expression.*/

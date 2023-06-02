@@ -1,4 +1,4 @@
-package lectures.part1.basics
+package lectures.basics.basics
 
 object ValuesVariablesTypes extends App {
 
